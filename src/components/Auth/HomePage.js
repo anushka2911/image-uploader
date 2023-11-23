@@ -1,19 +1,5 @@
 import React from 'react';
-import LoginForm from './LoginForm';
-import SignUpForm from './SignUpForm';
-import 'tailwindcss/tailwind.css';
-
-function handleLogIn() {
-  console.log("Log In button clicked");
-}
-
-function handleUserSignUp() {
-  console.log("Sign Up as User button clicked");
-}
-
-function handleAdminLogin() {
-  console.log("Sign Up as Admin button clicked");
-}
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -34,17 +20,18 @@ function Home() {
           <p className="text-center mb-8">
             Share and discover amazing images!
           </p>
-          <button onClick={handleLogIn} className="login btn btn-primary m-2 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-blue">
+
+          <Link to="/login" className="login flex flex-col justify-center items-center btn btn-primary m-2 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-blue">
             Log In
-          </button>
+          </Link>
 
-          <button onClick={handleUserSignUp} className="signup_user m-2 btn btn-primary bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-blue">
+          <Link to="/signup" className="signup_user flex flex-col justify-center items-center m-2 btn btn-primary bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-blue">
             Sign Up as User
-          </button>
+          </Link>
 
-          <button onClick={handleAdminLogin} className="signup_admin m-2 btn btn-primary bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-blue">
+          <Link to="/signup" className="flex flex-col justify-center items-center m-2 btn btn-primary bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-blue">
             Sign Up as Admin
-          </button>
+          </Link>
         </div>
       </div>
     </div>

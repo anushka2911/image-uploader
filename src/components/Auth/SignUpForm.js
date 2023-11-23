@@ -6,7 +6,7 @@ const SignUpForm = () => {
   const [password, setPassword] = useState('');
 
   const handleSignUp = () => {
-    // Implement your sign-up logic here
+    
     console.log('Signing up with:', email, password);
   };
 

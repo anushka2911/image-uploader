@@ -1,15 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import Home from './components/Auth/HomePage.js';
-import LoginForm from './components/Auth/LoginForm.js';
-import SignUpForm from './components/Auth/SignUpForm.js';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Auth/HomePage';
+import LoginForm from './components/Auth/LoginForm';
+import SignUpForm from './components/Auth/SignUpForm';
+
 function App() {
   return (
-    <div className="App">
-      <Home />
-      {/* <SignUpForm /> */}
-      {/* <LoginForm /> */}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/signup" element={<SignUpForm />} />
+      </Routes>
+    </Router>
   );
 }
 
