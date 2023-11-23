@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.signup{
+    font-family: 'Poppins', sans-serif;
+    margin:0px !important;
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign_up_form{
+    background-color: rgba(171, 216, 255, 0.884);
+    margin: 0px !important;
+    width:40vw;
+    height:40vh;
+}

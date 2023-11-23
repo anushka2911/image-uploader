@@ -1,0 +1,54 @@
+import React from 'react';
+import LoginForm from './LoginForm';
+import SignUpForm from './SignUpForm';
+import 'tailwindcss/tailwind.css';
+
+function handleLogIn() {
+  console.log("Log In button clicked");
+}
+
+function handleUserSignUp() {
+  console.log("Sign Up as User button clicked");
+}
+
+function handleAdminLogin() {
+  console.log("Sign Up as Admin button clicked");
+}
+
+function Home() {
+  return (
+    <div className="home_page container mx-auto p-8 bg-white mt-10 rounded-lg shadow-md">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex items-center justify-center">
+          <img
+            src="https://raw.githubusercontent.com/anushka2911/images/main/uploads/img_uploader.jpg"
+            alt="Uploaded Image"
+            className="w-full h-auto rounded-lg"
+          />
+        </div>
+
+        <div className="flex flex-col justify-center">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 text-center">
+            Welcome to Image Uploader
+          </h1>
+          <p className="text-center mb-8">
+            Share and discover amazing images!
+          </p>
+          <button onClick={handleLogIn} className="login btn btn-primary m-2 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-blue">
+            Log In
+          </button>
+
+          <button onClick={handleUserSignUp} className="signup_user m-2 btn btn-primary bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-blue">
+            Sign Up as User
+          </button>
+
+          <button onClick={handleAdminLogin} className="signup_admin m-2 btn btn-primary bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-blue">
+            Sign Up as Admin
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Home;
