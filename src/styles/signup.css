@@ -13,7 +13,46 @@
 
 .sign_up_form{
     background-color: rgba(171, 216, 255, 0.884);
-    margin: 0px !important;
+    margin: 0rem 2rem;
     width:40vw;
     height:40vh;
 }
+
+.upload-img{
+    margin: 0rem 0rem 2rem 2rem;
+}
+
+.upload-message{
+    font-weight: lighter;
+color:black;
+}
+
+.upload-btn{
+    color: #fff;
+    border-radius: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+}
+
+.labels, .select-image{
+    display: flex;
+    justify-content: flex-start;
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+.img_upload_btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .img_upload_btn:hover {
+    background-color: #0a4a8a;
+  }
+  

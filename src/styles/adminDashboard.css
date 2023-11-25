@@ -1,0 +1,77 @@
+.ad-navbar {
+  top: 0cm;
+  position: sticky;
+  width: 100%;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.ad-navbar h1 {
+  font-family: 'Kalam', cursive;
+  width: fit-content;
+  font-weight: lighter;
+  display: flex;
+  justify-content: flex-start;
+}
+.adminDashboard {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b6c4f0;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.uploadForm {
+  max-width: 30rem;
+  margin: 1rem auto;
+  padding: 2rem;
+  background: linear-gradient(to right, #60a5fa, #93c5fd);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+.formLabel {
+  display: block;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.formInput {
+  border: 1px solid #fff;
+  padding: 0.75rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.uploadButton {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.uploadButton:hover {
+  background-color: #3b82f6;
+}
+
+.img_upload_btn {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

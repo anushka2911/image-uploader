@@ -36,3 +36,54 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* ImageUploadForm.module.css */
+
+.adminDashboard {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1E40AF; 
+  margin-bottom: 2rem;
+}
+
+.uploadForm {
+  max-width: 30rem;
+  margin: 1rem auto;
+  padding: 2rem;
+  background: linear-gradient(to right, #60A5FA, #93C5FD); 
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.formLabel {
+  display: block;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.formInput {
+  border: 1px solid #fff;
+  padding: 0.75rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.uploadButton {
+  background-color: #2563EB; 
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.uploadButton:hover {
+  background-color: #3B82F6; 
+}
