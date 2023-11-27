@@ -25,8 +25,8 @@ const SearchBar = ({ onSearch }) => {
         className='search-labels'
       />
       <button type="submit" className='search-label-btn'>
-      Search
-        </button>
+        Search
+      </button>
     </form>
   );
 };
@@ -51,7 +51,7 @@ function Dashboard() {
       if (response.ok) {
         const result = await response.json();
         setImages(result.images);
-        setFilteredImages(result.images); 
+        setFilteredImages(result.images);
       } else {
         console.error('Error fetching images:', response.statusText);
       }
@@ -72,24 +72,34 @@ function Dashboard() {
     setFilteredImages(filtered);
   };
 
+  const handleImageClick = (fileName) => {
+    navigator.clipboard.writeText(fileName)
+      .then(() => {
+        console.log('File name copied to clipboard:', fileName);
+      })
+      .catch((error) => {
+        console.error('Error copying to clipboard:', error);
+      });
+  };
+
   return (
     <>
-     <div className='user-dashboard'>
-     <div className="dashboard">
-        <div className="gallery-title">
-          <h1 className='gallery-head'>Gallery</h1>
-          <SearchBar onSearch={handleSearch} />
-        </div>
-        <div className="gallery">
-          {filteredImages.map((image, index) => (
-            <div key={index} className="image-container">
-              <img src={`https://raw.githubusercontent.com/anushka2911/images/main/uploads/${image.file_name}`} alt={image.file_name} className="image" />
-              <p className="image-labels">{image.labels}</p> 
-            </div>
-          ))}
+      <div className='user-dashboard'>
+        <div className="dashboard">
+          <div className="gallery-title">
+            <h1 className='gallery-head'>Gallery</h1>
+            <SearchBar onSearch={handleSearch} />
+          </div>
+          <div className="gallery">
+            {filteredImages.map((image, index) => (
+              <div key={index} className="image-container" onClick={() => handleImageClick(image.file_name)}>
+                <img src={`https://raw.githubusercontent.com/anushka2911/images/main/uploads/${image.file_name}`} alt={image.file_name} className="image" />
+                <p className="image-labels">{image.labels}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-     </div>
     </>
   );
 }
