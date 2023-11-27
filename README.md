@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# Image Uploader App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application serves as an image uploader, allowing users to perform actions based on their assigned roles. The app includes features for user authentication, role-based access, image uploading, and label editing.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+### Backend Server
 
-### `npm start`
+1. Clone the backend repository:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   ```bash
+   git clone https://github.com/anushka2911/image-uploader-backend
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Navigate to the backend directory:
 
-### `npm test`
+   ```bash
+   cd image-uploader-backend
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Start the backend server:
 
-### `npm run build`
+   ```bash
+   go run main.go
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the frontend repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/anushka2911/image-uploader
+   ```
 
-### `npm run eject`
+2. Navigate to the frontend directory:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   cd image-uploader
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Install dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Start the frontend application:
 
-## Learn More
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Login
 
-### Code Splitting
+Choose one of the following credentials for login:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Admin:
+  - Email: anushkap161@gmail.com
+  - Password: qwerty123
 
-### Analyzing the Bundle Size
+- User:
+  - Email: john.doe@example.com
+  - Password: password123
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Signup
 
-### Making a Progressive Web App
+Enter a valid email ID and password for signup. The entered data will be stored on the backend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Upload Images
 
-### Advanced Configuration
+1. Click on the "Upload Image" button.
+2. Choose an image from your local storage.
+3. Add labels to the image.
+4. Click "Upload" to upload the image.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Edit Image
 
-### Deployment
+1. Click on any image to copy its file name.
+2. Click on the "Edit" button.
+3. Paste the copied file name (e.g., image_1700900440074250700.jpg).
+4. Add or edit labels as needed.
+5. Click "Save" to apply the changes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Example Tests
 
-### `npm run build` fails to minify
+### Login Credentials
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Admin:
+  - Email: anushkap161@gmail.com
+  - Password: qwerty123
+
+- User:
+  - Email: john.doe@example.com
+  - Password: password123
+
+### Signup
+
+Enter a valid email ID and password for signup. The entered data will be stored on the backend.
+
+### Upload Images
+
+1. Click on the "Upload Image" button.
+2. Choose an image from your local storage.
+3. Add labels to the image.
+4. Click "Upload" to upload the image.
+
+### Edit Image
+
+1. Click on any image to copy its file name.
+2. Click on the "Edit" button.
+3. Paste the copied file name (e.g., image_1700900440074250700.jpg).
+4. Add or edit labels as needed.
+5. Click "Save" to apply the changes.
