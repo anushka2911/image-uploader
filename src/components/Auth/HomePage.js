@@ -26,12 +26,9 @@ function Home() {
           </Link>
 
           <Link to="/signup" className="signup_user flex flex-col justify-center items-center m-2 btn btn-primary bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-blue">
-            Sign Up as User
+            Sign Up
           </Link>
 
-          <Link to="/signup" className="flex flex-col justify-center items-center m-2 btn btn-primary bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-blue">
-            Sign Up as Admin
-          </Link>
         </div>
       </div>
     </div>

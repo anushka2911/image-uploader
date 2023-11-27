@@ -4,18 +4,20 @@ import Home from './components/Auth/HomePage';
 import LoginForm from './components/Auth/LoginForm';
 import SignUpForm from './components/Auth/SignUpForm';
 import ImageUploadForm from './components/AdminDashboard/AdminDashboard';
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
   return (
-    // <Router>
-    //   <Routes>
-    //     <Route path="/" element={<Home />} />
-    //     <Route path="/login" element={<LoginForm />} />
-    //     <Route path="/signup" element={<SignUpForm />} />
-    //   </Routes>
-    // </Router>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/signup" element={<SignUpForm />} />
+        <Route path="/admin-dashboard" element={<ImageUploadForm />} />
+        <Route path="/user-dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
 
-    <ImageUploadForm/>
   );
 }
 

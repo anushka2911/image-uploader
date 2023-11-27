@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; 
 
 const LoginForm = () => {
+  const navigate = useNavigate(); 
+
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
 
   const handleLogin = async () => {
     setLoading(true);
@@ -23,14 +27,26 @@ const LoginForm = () => {
         console.log("Login successful");
         console.log("Message:", data.message);
         console.log("Role:", data.role);
+
+        if (data.role === "admin") {
+          navigate("/admin-dashboard");
+        } else {
+          navigate("/user-dashboard");
+        }
       } else {
         console.error("Login failed:", data.error);
+        setError(data.error);
       }
     } catch (error) {
       console.error("Error during login:", error);
+      setError("An unexpected error occurred."); 
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleCloseError = () => {
+    setError(null); 
   };
 
   return (
@@ -58,6 +74,14 @@ const LoginForm = () => {
         >
           {loading ? "Logging in..." : "Login"}
         </button>
+        {error && (
+          <div className="error-modal">
+            <p className="error-message">{error}</p>
+            <button onClick={handleCloseError} className="close-btn">
+              Close
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

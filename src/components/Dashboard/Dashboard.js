@@ -16,7 +16,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <form onSubmit={handleSearchSubmit}>
+    <form onSubmit={handleSearchSubmit} className='search-bar'>
       <input
         type="text"
         placeholder="Search labels..."
@@ -74,7 +74,8 @@ function Dashboard() {
 
   return (
     <>
-      <div className="dashboard">
+     <div className='user-dashboard'>
+     <div className="dashboard">
         <div className="gallery-title">
           <h1 className='gallery-head'>Gallery</h1>
           <SearchBar onSearch={handleSearch} />
@@ -83,11 +84,12 @@ function Dashboard() {
           {filteredImages.map((image, index) => (
             <div key={index} className="image-container">
               <img src={`https://raw.githubusercontent.com/anushka2911/images/main/uploads/${image.file_name}`} alt={image.file_name} className="image" />
-              <p className="image-labels">{image.labels}</p>
+              <p className="image-labels">{image.labels}</p> 
             </div>
           ))}
         </div>
       </div>
+     </div>
     </>
   );
 }
